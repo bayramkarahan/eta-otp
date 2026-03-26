@@ -42,6 +42,8 @@ class MainWindow:
         self.ui_button_delete.connect("clicked", self.on_delete_event)
         self.ui_button_fromkey.connect("clicked", self.on_fromkey_event)
         self.ui_button_qr_back.connect("clicked", self.on_qr_back_event)
+        self.ui_button_createuser.connect("clicked", self.on_createusers_event)
+        self.ui_button_deluser.connect("clicked", self.on_delusers_event)
 
         self.ui_window_main.show_all()
         self.ui_button_qr_back.hide()
@@ -63,7 +65,70 @@ class MainWindow:
     def on_qr_back_event(self, widget):
         self.ui_button_qr_back.hide()
         self.ui_stack_main.set_visible_child_name("settings")
+        
+    def on_createusers_event(self, widget):
+        users = [
+			{"name": "turkce", "password": "ogretmen", "fullname": "Türkçe"},
+			{"name": "matematik", "password": "ogretmen", "fullname": "Matematik"},
+			{"name": "sosyal", "password": "ogretmen", "fullname": "Sosyal Bil."},
+			{"name": "fen", "password": "ogretmen", "fullname": "Fen Bil."},
+			{"name": "bilisim", "password": "ogretmen", "fullname": "Bilişim"},
+			{"name": "gorsel", "password": "ogretmen", "fullname": "Görsel Sanat"},
+			{"name": "muzik", "password": "ogretmen", "fullname": "Müzik"},
+			{"name": "dikab", "password": "ogretmen", "fullname": "Din Kültürü"},
+			{"name": "yabancidil", "password": "ogretmen", "fullname": "Yabancı Dil"}
+        ]
 
+        for user in users:
+            username = user["name"]
+            password = user["password"]
+            fullname = user["fullname"]
+
+			# Parolayı hashle
+            hashed_pass = subprocess.run(
+				["openssl", "passwd", password],
+				capture_output=True, text=True
+			).stdout.strip()
+
+			# Kullanıcı oluştur
+            cmd = [
+				"sudo", "useradd",
+				"-m", username,
+				"-s", "/bin/bash",
+				"-p", hashed_pass,
+				"-U",
+				"-d", f"/home/{username}",
+				"-c", fullname
+            ]
+
+            try:
+                subprocess.run(cmd, check=True)
+                print(f"Kullanıcı {username} ({fullname}) oluşturuldu.")
+            except subprocess.CalledProcessError as e:
+                print(f"Kullanıcı {username} oluşturulamadı: {e}")
+
+    def on_delusers_event(self, widget):
+        users = [
+			{"name": "turkce", "password": "ogretmen", "fullname": "Türkçe"},
+			{"name": "matematik", "password": "ogretmen", "fullname": "Matematik"},
+			{"name": "sosyal", "password": "ogretmen", "fullname": "Sosyal Bil."},
+			{"name": "fen", "password": "ogretmen", "fullname": "Fen Bil."},
+			{"name": "bilisim", "password": "ogretmen", "fullname": "Bilişim"},
+			{"name": "gorsel", "password": "ogretmen", "fullname": "Görsel Sanat"},
+			{"name": "muzik", "password": "ogretmen", "fullname": "Müzik"},
+			{"name": "dikab", "password": "ogretmen", "fullname": "Din Kültürü"},
+			{"name": "yabancidil", "password": "ogretmen", "fullname": "Yabancı Dil"}
+        ]
+
+        for user in users:
+            username = user["name"]
+            cmd = ["sudo", "userdel", "-r", username]  # -r ev dizinini ve grubunu siler
+            try:
+                subprocess.run(cmd, check=True)
+                print(f"Kullanıcı {username} silindi.")
+            except subprocess.CalledProcessError as e:
+                print(f"Kullanıcı {username} silinemedi: {e}")				        
+				        
     def on_newotp_event(self, widget):
         self.secret = self.generate_secret()
         self.ui_stack_main.set_visible_child_name("settings")

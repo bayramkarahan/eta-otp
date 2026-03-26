@@ -51,6 +51,12 @@ def create_gui(self):
         self.ui_button_fromkey = Gtk.Button(label=_("Generate Pin from key"))
         self.ui_box_main.pack_start(self.ui_button_fromkey, False, False, 0)
 
+        self.ui_button_createuser = Gtk.Button(label=_("Create Users"))
+        self.ui_box_main.pack_start(self.ui_button_createuser, False, False, 0)
+        
+        self.ui_button_deluser = Gtk.Button(label=_("Del Users"))
+        self.ui_box_main.pack_start(self.ui_button_deluser, False, False, 0)
+        
 ########## Otp settings page ##########
 
         self.ui_box_settings = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
@@ -68,6 +74,8 @@ def create_gui(self):
         self.ui_button_delete = Gtk.Button(label=_("Remove Pin"))
         self.ui_box_settings.pack_start(self.ui_button_delete, False, False, 0)
 
+
+        
 ########## QR / Key page ##########
 
         self.ui_box_qr = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)

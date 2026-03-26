@@ -97,6 +97,14 @@ msgstr "Pin Kaldır"
 msgid "Back"
 msgstr "Geri"
 
+#: src/gui.py:88
+msgid "Create Users"
+msgstr "Kullanıcıları Oluştur"
+#: src/gui.py:88
+
+msgid "Del Users"
+msgstr "Kullanıcıları Sil"
+
 #: src/gui.py:89
 msgid "Help"
 msgstr "Yardım"
