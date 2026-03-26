@@ -8,7 +8,7 @@ import pyotp
 import pickle
 import qrcode
 from io import BytesIO
-
+from gi.repository import GLib
 import locale
 from locale import gettext as _
 
@@ -67,6 +67,10 @@ class MainWindow:
         self.ui_stack_main.set_visible_child_name("settings")
         
     def on_createusers_event(self, widget):
+        GLib.idle_add(
+                self.ui_label_status.set_text,
+                _(f"Kullanıcılar Oluşturuluyor Bekleyin..")
+            )
         users = [
 			{"name": "turkce", "password": "ogretmen", "fullname": "Türkçe"},
 			{"name": "matematik", "password": "ogretmen", "fullname": "Matematik"},
@@ -104,10 +108,18 @@ class MainWindow:
             try:
                 subprocess.run(cmd, check=True)
                 print(f"Kullanıcı {username} ({fullname}) oluşturuldu.")
+                GLib.idle_add(
+                self.ui_label_status.set_text,
+                _(f"Kullanıcı {username} ({fullname}) oluşturuldu.")
+            )
             except subprocess.CalledProcessError as e:
                 print(f"Kullanıcı {username} oluşturulamadı: {e}")
 
     def on_delusers_event(self, widget):
+        GLib.idle_add(
+                self.ui_label_status.set_text,
+                _(f"Kullanıcılar Siliniyor Bekleyin..")
+            )
         users = [
 			{"name": "turkce", "password": "ogretmen", "fullname": "Türkçe"},
 			{"name": "matematik", "password": "ogretmen", "fullname": "Matematik"},
@@ -126,6 +138,8 @@ class MainWindow:
             try:
                 subprocess.run(cmd, check=True)
                 print(f"Kullanıcı {username} silindi.")
+                GLib.idle_add(self.ui_label_status.set_text,_(f"Kullanıcı {username} silindi."))
+                
             except subprocess.CalledProcessError as e:
                 print(f"Kullanıcı {username} silinemedi: {e}")				        
 				        

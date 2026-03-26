@@ -40,6 +40,9 @@ def create_gui(self):
         self.ui_stack_main.add_named(self.ui_box_main, "main")
 
         self.ui_box_main.pack_start(Gtk.Label(label=_("Pin is not available.")), False, False, 0)
+        
+        self.ui_label_status = Gtk.Label(label=_("....."))
+        self.ui_box_main.pack_start(self.ui_label_status, False, False, 0)
 
         self.ui_button_newotp = Gtk.Button(label=_("Generate a new Pin"))
         self.ui_box_main.pack_start(self.ui_button_newotp, False, False, 0)
