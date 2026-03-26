@@ -1,0 +1,8 @@
+Name: TOTP pam module
+Auth-Type: Primary
+Default: yes
+Priority: 999
+Session-Type: Additional
+Session-Interactive-Only: yes
+Auth:
+	sufficient       pam_python.so /usr/libexec/pam_otp.py
