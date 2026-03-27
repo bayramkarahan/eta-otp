@@ -76,36 +76,27 @@ class MainWindow:
             )
         self.info_dialog(_("Info"), _("Users are being added. (turkce,matematik,sosyal,fen,bilisim,gorsel,muzik,dikab,yabancidil) Please wait..."))
         users = [
-			{"name": "turkce", "password": "ogrtmn", "fullname": "Türkçe"},
-			{"name": "matematik", "password": "ogrtmn", "fullname": "Matematik"},
-			{"name": "sosyal", "password": "ogrtmn", "fullname": "Sosyal Bil."},
-			{"name": "fen", "password": "ogrtmn", "fullname": "Fen Bil."},
-			{"name": "bilisim", "password": "ogrtmn", "fullname": "Bilişim"},
-			{"name": "gorsel", "password": "ogrtmn", "fullname": "Görsel Sanat"},
-			{"name": "muzik", "password": "ogrtmn", "fullname": "Müzik"},
-			{"name": "dikab", "password": "ogrtmn", "fullname": "Din Kültürü"},
-			{"name": "felsefe", "password": "ogrtmn", "fullname": "Felsefe Grubu"},
-			{"name": "turkdili", "password": "ogrtmn", "fullname": "Türk Dili Edebiyatı"},
-			{"name": "yabancidil", "password": "ogrtmn", "fullname": "Yabancı Dil"}
+			{"name": "turkce",  "fullname": "Türkçe"},
+			{"name": "matematik",  "fullname": "Matematik"},
+			{"name": "sosyal",  "fullname": "Sosyal Bil."},
+			{"name": "fen",  "fullname": "Fen Bil."},
+			{"name": "bilisim", "fullname": "Bilişim"},
+			{"name": "gorsel",  "fullname": "Görsel Sanat"},
+			{"name": "muzik",  "fullname": "Müzik"},
+			{"name": "dikab", "fullname": "Din Kültürü"},
+			{"name": "felsefe",  "fullname": "Felsefe Grubu"},
+			{"name": "turkdili",  "fullname": "Türk Dili Edebiyatı"},
+			{"name": "yabancidil", "fullname": "Yabancı Dil"}
         ]
 
         for user in users:
             username = user["name"]
-            password = user["password"]
             fullname = user["fullname"]
-
-			# Parolayı hashle
-            hashed_pass = subprocess.run(
-				["openssl", "passwd", password],
-				capture_output=True, text=True
-			).stdout.strip()
-
 			# Kullanıcı oluştur
             cmd = [
 				"sudo", "useradd",
 				"-m", username,
 				"-s", "/bin/bash",
-				"-p", hashed_pass,
 				"-U",
 				"-d", f"/home/{username}",
 				"-c", fullname
@@ -149,17 +140,17 @@ class MainWindow:
     def on_delusers_event(self, widget):
         self.info_dialog(_("Info"), _("Users are being deleted. Please wait..."))
         users = [
-			{"name": "turkce", "password": "ogrtmn", "fullname": "Türkçe"},
-			{"name": "matematik", "password": "ogrtmn", "fullname": "Matematik"},
-			{"name": "sosyal", "password": "ogrtmn", "fullname": "Sosyal Bil."},
-			{"name": "fen", "password": "ogrtmn", "fullname": "Fen Bil."},
-			{"name": "bilisim", "password": "ogrtmn", "fullname": "Bilişim"},
-			{"name": "gorsel", "password": "ogrtmn", "fullname": "Görsel Sanat"},
-			{"name": "muzik", "password": "ogrtmn", "fullname": "Müzik"},
-			{"name": "dikab", "password": "ogrtmn", "fullname": "Din Kültürü"},
-			{"name": "felsefe", "password": "ogrtmn", "fullname": "Felsefe Grubu"},
-			{"name": "turkdili", "password": "ogrtmn", "fullname": "Türk Dili Edebiyatı"},
-			{"name": "yabancidil", "password": "ogrtmn", "fullname": "Yabancı Dil"}
+			{"name": "turkce",  "fullname": "Türkçe"},
+			{"name": "matematik",  "fullname": "Matematik"},
+			{"name": "sosyal", "fullname": "Sosyal Bil."},
+			{"name": "fen",  "fullname": "Fen Bil."},
+			{"name": "bilisim", "fullname": "Bilişim"},
+			{"name": "gorsel", "fullname": "Görsel Sanat"},
+			{"name": "muzik",  "fullname": "Müzik"},
+			{"name": "dikab",  "fullname": "Din Kültürü"},
+			{"name": "felsefe",  "fullname": "Felsefe Grubu"},
+			{"name": "turkdili",  "fullname": "Türk Dili Edebiyatı"},
+			{"name": "yabancidil",  "fullname": "Yabancı Dil"}
         ]
 
         for user in users:

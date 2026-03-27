@@ -70,11 +70,11 @@ msgstr "Kullanıcıları Sil"
 
 #: src/gui.py:85
 msgid "Del Ogretmen"
-msgstr "Ogretmen Sil"
+msgstr "Ögretmen Kullanıcısını Sil"
 
 #: src/gui.py:88
 msgid "Del Ogrenci"
-msgstr "Öğrenci Sil"
+msgstr "Öğrenci Kullanıcısını Sil"
 
 #: src/gui.py:109
 msgid "Back"
