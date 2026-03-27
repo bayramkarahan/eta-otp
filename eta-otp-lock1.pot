@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-30 17:51+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/MainWindow.py:100
+msgid "Invalid Pin"
+msgstr ""
+
+#: src/MainWindow.py:100
+msgid "Pin user is not you"
+msgstr ""
+
+#: src/MainWindow.py:105
+msgid "Failed to read Pin file"
+msgstr ""
+
+#: src/MainWindow.py:117
+msgid "Error"
+msgstr ""
+
+#: src/MainWindow.py:117
+msgid "Failed to export Pin key file"
+msgstr ""
+
+#: src/MainWindow.py:160
+msgid "Select a File"
+msgstr ""
+
+#: src/MainWindow.py:168 src/MainWindow.py:189
+msgid "Pin keys"
+msgstr ""
+
+#: src/MainWindow.py:181
+msgid "Save a File"
+msgstr ""
+
+#: src/MainWindow.py:204
+msgid "Enter a Secret"
+msgstr ""
+
+#: src/MainWindow.py:216
+msgid "Enter your key here"
+msgstr ""
+
+#: src/gui.py:17
+msgid "Pin Login Settings"
+msgstr ""
+
+#: src/gui.py:42
+msgid "Pin is not available."
+msgstr ""
+
+#: src/gui.py:44
+msgid "Generate a new Pin"
+msgstr ""
+
+#: src/gui.py:47
+msgid "Import Pin from File"
+msgstr ""
+
+#: src/gui.py:51
+msgid "Generate Pin from key"
+msgstr ""
+
+#: src/gui.py:60
+msgid "Pin available."
+msgstr ""
+
+#: src/gui.py:62
+msgid "Show Pin QR/Key"
+msgstr ""
+
+#: src/gui.py:65
+msgid "Export Pin to file"
+msgstr ""
+
+#: src/gui.py:68
+msgid "Remove Pin"
+msgstr ""
+
+#: src/gui.py:88
+msgid "Back"
+msgstr ""
+
+#: src/gui.py:89
+msgid "Help"
+msgstr ""

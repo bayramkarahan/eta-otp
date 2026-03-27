@@ -1,9 +1,8 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Turkish translations for PACKAGE package.
+# Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Etap Yetkili <etapadmin@etap>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -17,94 +16,153 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/MainWindow.py:100
-msgid "Invalid Pin"
-msgstr "Geçersiz Pin"
-
-#: src/MainWindow.py:100
-msgid "Pin user is not you"
-msgstr "Pin kullanıcısı siz değilsiniz"
-
-#: src/MainWindow.py:105
-msgid "Failed to read Pin file"
-msgstr "Pin dosyası okunamadı"
-
-#: src/MainWindow.py:117
-msgid "Error"
-msgstr "Hata"
-
-#: src/MainWindow.py:117
-msgid "Failed to export Pin key file"
-msgstr "Pin anahtarı dosyaya aktarılamadı"
-
-#: src/MainWindow.py:160
-msgid "Select a File"
-msgstr "Bir dosya seçin"
-
-#: src/MainWindow.py:168 src/MainWindow.py:189
-msgid "Pin keys"
-msgstr "Pin anahtarları"
-
-#: src/MainWindow.py:181
-msgid "Save a File"
-msgstr "Bir dosya kaydedin"
-
-#: src/MainWindow.py:204
-msgid "Enter a Secret"
-msgstr "Bir Secret girin"
-
-#: src/MainWindow.py:216
-msgid "Enter your key here"
-msgstr "Anahtarınızı buraya girin"
-
 #: src/gui.py:17
 msgid "Pin Login Settings"
 msgstr "Pin Giriş Ayarları"
 
 #: src/gui.py:42
 msgid "Pin is not available."
-msgstr "Pin kullanılabilir değil."
+msgstr "Pin kullanılabilir değil"
 
 #: src/gui.py:44
+msgid "....."
+msgstr ""
+
+#: src/gui.py:47
 msgid "Generate a new Pin"
 msgstr "Yeni Pin oluştur"
 
-#: src/gui.py:47
+#: src/gui.py:50
 msgid "Import Pin from File"
 msgstr "Dosyadan Pin içe aktar"
 
-#: src/gui.py:51
+#: src/gui.py:54
 msgid "Generate Pin from key"
 msgstr "Anahtardan Pin oluştur"
 
-#: src/gui.py:60
+#: src/gui.py:63
 msgid "Pin available."
 msgstr "Pin kullanılabilir."
 
-#: src/gui.py:62
+#: src/gui.py:65
 msgid "Show Pin QR/Key"
 msgstr "Pin QR/Anahtar göster"
 
-#: src/gui.py:65
+#: src/gui.py:68
 msgid "Export Pin to file"
 msgstr "Dosyaya Pin aktar"
 
-#: src/gui.py:68
+#: src/gui.py:71
 msgid "Remove Pin"
 msgstr "Pin Kaldır"
 
-#: src/gui.py:88
-msgid "Back"
-msgstr "Geri"
-
-#: src/gui.py:88
+#: src/gui.py:76
 msgid "Create Users"
 msgstr "Kullanıcıları Oluştur"
-#: src/gui.py:88
 
+#: src/gui.py:79
+msgid "Set Password Users"
+msgstr "Kullanıcı Parolaları Ayarla"
+
+#: src/gui.py:82
 msgid "Del Users"
 msgstr "Kullanıcıları Sil"
 
-#: src/gui.py:89
+#: src/gui.py:85
+msgid "Del Ogretmen"
+msgstr "Ogretmen Sil"
+
+#: src/gui.py:88
+msgid "Del Ogrenci"
+msgstr "Öğrenci Sil"
+
+#: src/gui.py:109
+msgid "Back"
+msgstr "Geri"
+
+#: src/gui.py:110
 msgid "Help"
 msgstr "Yardım"
+
+#: src/MainWindow.py:75
+msgid "Creating users. Please wait..."
+msgstr "Kullanıcılar Oluşturuluyor. Lütfen Bekleyin."
+
+#: src/MainWindow.py:77
+msgid "Info"
+msgstr "Bilgi"
+
+#: src/MainWindow.py:77
+msgid "Users are being added. (turkce,matematik,sosyal,fen,bilisim,gorsel,muzik,"
+"dikab,yabancidil) Please wait..."
+msgstr "Kullanıcılar (turkce,matematik,sosyal,fen,bilisim,gorsel,muzik,"
+"dikab,yabancidil)  Eklenecek. Lütfen Bekleyiniz."
+
+#: src/MainWindow.py:117
+msgid "Users added..."
+msgstr "Kullanıcılar Eklendi."
+
+#: src/MainWindow.py:120
+msgid "User passwords will be changed."
+msgstr "Kullanıcı Parolaları Değiştirilecek."
+
+#: src/MainWindow.py:145
+msgid "User passwords have been changed."
+msgstr "Kullanıcı Parolaları Değiştirildi."
+
+#: src/MainWindow.py:148
+msgid "Users are being deleted. Please wait..."
+msgstr "Kullanıcılar siliniyor. Lütfen bekleyin..."
+
+#: src/MainWindow.py:169
+msgid "Users Deleted."
+msgstr "Kullanıcılar Silindi"
+
+#: src/MainWindow.py:177
+#, python-brace-format
+msgid "Users {username}  Deleted."
+msgstr "User {username} Silindi."
+
+#: src/MainWindow.py:216
+msgid "Failed to read Pin file"
+msgstr "Pin dosyası okuma hatası."
+
+#: src/MainWindow.py:227
+msgid "Error"
+msgstr "Hata"
+
+#: src/MainWindow.py:227
+msgid "Failed to export Pin key file"
+msgstr "Pin anahtarı dosyaya aktarılamadı"
+
+#: src/MainWindow.py:261
+msgid "Select a File"
+msgstr "Bir dosya seçin"
+
+#: src/MainWindow.py:269 src/MainWindow.py:287
+msgid "Pin keys"
+msgstr "Pin anahtarları"
+
+#: src/MainWindow.py:279
+msgid "Save a File"
+msgstr "Bir dosya kaydedin"
+
+#: src/MainWindow.py:302
+msgid "Enter a Secret"
+msgstr "Bir Secret girin"
+
+#: src/MainWindow.py:311
+msgid "Enter your key here"
+msgstr "Anahtarınızı buraya girin"
+
+#: src/MainWindow.py:320
+msgid "Enter a Passwd"
+msgstr "Bir Parola Girin"
+
+#: src/MainWindow.py:338
+msgid "Enter password"
+msgstr "Parola Girin"
+
+#: src/MainWindow.py:341
+msgid "Enter text"
+msgstr "Metin Girin"
