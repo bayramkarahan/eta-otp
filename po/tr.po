@@ -100,28 +100,28 @@ msgstr "Bilgi"
 msgid ""
 "Branch Accounts (turkce,matematik,sosyal,fen,bilisim,gorsel,muzik,dikab,"
 "felsefe,turkdili,yabancidil) are being added. Please wait..."
-msgstr "Kullanıcılar (turkce,matematik,sosyal,fen,bilisim,gorsel,muzik,"
+msgstr "Branş Hesapları (turkce,matematik,sosyal,fen,bilisim,gorsel,muzik,"
 "dikab,felsefe,turkdili,yabancidil)  Eklenecek. Lütfen Bekleyiniz."
 
 #: src/MainWindow.py:110
 msgid "Branch Accounts Added..."
-msgstr "Branşh Hesapları Oluşturuldu."
+msgstr "Branş Hesapları Oluşturuldu."
 
 #: src/MainWindow.py:113
 msgid "Branch Accounts passwords will be changed."
-msgstr "Branşh Hesap Parolaları Değiştirilecek."
+msgstr "Branş Hesap Parolaları Değiştirilecek."
 
 #: src/MainWindow.py:138
 msgid "Branch Accounts passwords have been changed."
-msgstr "Branşh Hesap Parolaları Değiştirildi."
+msgstr "Branş Hesap Parolaları Değiştirildi."
 
 #: src/MainWindow.py:141
 msgid "Branch Accounts are being deleted. Please wait..."
-msgstr "Branşh Hesapları Silinecek. Lütfen Bekleyiniz..."
+msgstr "Branş Hesapları Silinecek. Lütfen Bekleyiniz..."
 
 #: src/MainWindow.py:164
 msgid "Branch Accounts Deleted."
-msgstr "Branşh Hesapları Silindi."
+msgstr "Branş Hesapları Silindi."
 
 #: src/MainWindow.py:172
 msgid "User Deleted."
