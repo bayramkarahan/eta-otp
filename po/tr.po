@@ -93,10 +93,8 @@ msgid "Info"
 msgstr "Bilgi"
 
 #: src/MainWindow.py:77
-msgid "Users are being added. (turkce,matematik,sosyal,fen,bilisim,gorsel,muzik,"
-"dikab,yabancidil) Please wait..."
-msgstr "Kullanıcılar (turkce,matematik,sosyal,fen,bilisim,gorsel,muzik,"
-"dikab,yabancidil)  Eklenecek. Lütfen Bekleyiniz."
+msgid "Users are being added. (turkce,matematik, sosyal, fen, bilisim, gorsel, muzik, dikab, felsefe, turkdili, yabancidil) Please wait..."
+msgstr "Kullanıcılar (turkce,matematik, sosyal, fen, bilisim, gorsel, muzik, dikab, felsefe, turkdili, yabancidil)  Eklenecek. Lütfen Bekleyiniz."
 
 #: src/MainWindow.py:117
 msgid "Users added..."

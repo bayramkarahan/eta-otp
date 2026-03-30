@@ -95,8 +95,7 @@ msgstr ""
 
 #: src/MainWindow.py:77
 msgid ""
-"Users are being added. (turkce,matematik,sosyal,fen,bilisim,gorsel,muzik,"
-"dikab,yabancidil) Please wait..."
+"Users are being added. (turkce,matematik, sosyal, fen, bilisim, gorsel, muzik, dikab, felsefe, turkdili, yabancidil) Please wait..."
 msgstr ""
 
 #: src/MainWindow.py:117
