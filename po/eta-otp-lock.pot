@@ -58,23 +58,23 @@ msgid "Remove Pin"
 msgstr ""
 
 #: src/gui.py:76
-msgid "Create Users"
+msgid "Create Branch Accounts"
 msgstr ""
 
 #: src/gui.py:79
-msgid "Set Password Users"
+msgid "Set passwords Branch Accounts"
 msgstr ""
 
 #: src/gui.py:82
-msgid "Del Users"
+msgid "Del Branch Accounts"
 msgstr ""
 
 #: src/gui.py:85
-msgid "Del Ogretmen"
+msgid "Delete Teacher Account"
 msgstr ""
 
 #: src/gui.py:88
-msgid "Del Ogrenci"
+msgid "Delete Limited Access Account"
 msgstr ""
 
 #: src/gui.py:109
@@ -89,80 +89,82 @@ msgstr ""
 msgid "Creating users. Please wait..."
 msgstr ""
 
-#: src/MainWindow.py:77
+#: src/MainWindow.py:77 src/MainWindow.py:110 src/MainWindow.py:113
+#: src/MainWindow.py:138 src/MainWindow.py:141 src/MainWindow.py:164
+#: src/MainWindow.py:172
 msgid "Info"
 msgstr ""
 
 #: src/MainWindow.py:77
 msgid ""
-"Users are being added. (turkce,matematik, sosyal, fen, bilisim, gorsel, muzik, dikab, felsefe, turkdili, yabancidil) Please wait..."
+"Branch Accounts (turkce,matematik,sosyal,fen,bilisim,gorsel,muzik,dikab,"
+"felsefe,turkdili,yabancidil) are being added. Please wait..."
 msgstr ""
 
-#: src/MainWindow.py:117
-msgid "Users added..."
+#: src/MainWindow.py:110
+msgid "Branch Accounts Added..."
 msgstr ""
 
-#: src/MainWindow.py:120
-msgid "User passwords will be changed."
+#: src/MainWindow.py:113
+msgid "Branch Accounts passwords will be changed."
 msgstr ""
 
-#: src/MainWindow.py:145
-msgid "User passwords have been changed."
+#: src/MainWindow.py:138
+msgid "Branch Accounts passwords have been changed."
 msgstr ""
 
-#: src/MainWindow.py:148
-msgid "Users are being deleted. Please wait..."
+#: src/MainWindow.py:141
+msgid "Branch Accounts are being deleted. Please wait..."
 msgstr ""
 
-#: src/MainWindow.py:169
-msgid "Users Deleted."
+#: src/MainWindow.py:164
+msgid "Branch Accounts Deleted."
 msgstr ""
 
-#: src/MainWindow.py:177
-#, python-brace-format
-msgid "Users {username}  Deleted."
+#: src/MainWindow.py:172
+msgid "User Deleted."
 msgstr ""
 
-#: src/MainWindow.py:216
+#: src/MainWindow.py:211
 msgid "Failed to read Pin file"
 msgstr ""
 
-#: src/MainWindow.py:227
+#: src/MainWindow.py:222
 msgid "Error"
 msgstr ""
 
-#: src/MainWindow.py:227
+#: src/MainWindow.py:222
 msgid "Failed to export Pin key file"
 msgstr ""
 
-#: src/MainWindow.py:261
+#: src/MainWindow.py:256
 msgid "Select a File"
 msgstr ""
 
-#: src/MainWindow.py:269 src/MainWindow.py:287
+#: src/MainWindow.py:264 src/MainWindow.py:282
 msgid "Pin keys"
 msgstr ""
 
-#: src/MainWindow.py:279
+#: src/MainWindow.py:274
 msgid "Save a File"
 msgstr ""
 
-#: src/MainWindow.py:302
+#: src/MainWindow.py:297
 msgid "Enter a Secret"
 msgstr ""
 
-#: src/MainWindow.py:311
+#: src/MainWindow.py:306
 msgid "Enter your key here"
 msgstr ""
 
-#: src/MainWindow.py:320
+#: src/MainWindow.py:315
 msgid "Enter a Passwd"
 msgstr ""
 
-#: src/MainWindow.py:338
+#: src/MainWindow.py:333
 msgid "Enter password"
 msgstr ""
 
-#: src/MainWindow.py:341
+#: src/MainWindow.py:336
 msgid "Enter text"
 msgstr ""
