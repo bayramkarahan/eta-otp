@@ -74,7 +74,7 @@ class MainWindow:
                 self.ui_label_status.set_text,
                 _(f"Creating users. Please wait...")
             )
-        self.info_dialog(_("Info"), _("Branch Accounts (turkce,matematik,sosyal,fen,bilisim,gorsel,muzik,dikab,felsefe,turkdili,yabancidil) are being added. Please wait..."))
+        self.info_dialog(_("Info"), _("Branch Accounts are being added. Please wait..."))
         users = [
 			{"name": "turkce",  "fullname": "Türkçe"},
 			{"name": "matematik",  "fullname": "Matematik"},
@@ -85,7 +85,13 @@ class MainWindow:
 			{"name": "muzik",  "fullname": "Müzik"},
 			{"name": "dikab", "fullname": "Din Kültürü"},
 			{"name": "felsefe",  "fullname": "Felsefe Grubu"},
-			{"name": "turkdili",  "fullname": "Türk Dili Edebiyatı"},
+			{"name": "fizik",  "fullname": "Fizik"},
+			{"name": "kimya",  "fullname": "Kimya"},
+			{"name": "biyoloji",  "fullname": "Biyoloji"},
+			{"name": "cografya",  "fullname": "Coğrafya"},
+			{"name": "tarih",  "fullname": "Tarih"},								
+			{"name": "turkdili",  "fullname": "Meslek Dersleri"},
+			{"name": "meslek",  "fullname": "Felsefe Grubu"},
 			{"name": "yabancidil", "fullname": "Yabancı Dil"}
         ]
 
@@ -117,7 +123,8 @@ class MainWindow:
 
         users = [
             "turkce", "matematik", "sosyal", "fen",
-            "bilisim", "gorsel", "muzik", "dikab","turkdili","felsefe", "yabancidil"
+            "bilisim", "gorsel", "muzik", "dikab","turkdili","felsefe",
+            "fizik","kimya","biyoloji","tarih","cografya","meslek", "yabancidil"
         ]
 
         for username in users:
@@ -149,7 +156,13 @@ class MainWindow:
 			{"name": "muzik",  "fullname": "Müzik"},
 			{"name": "dikab",  "fullname": "Din Kültürü"},
 			{"name": "felsefe",  "fullname": "Felsefe Grubu"},
-			{"name": "turkdili",  "fullname": "Türk Dili Edebiyatı"},
+			{"name": "fizik",  "fullname": "Fizik"},
+			{"name": "kimya",  "fullname": "Kimya"},
+			{"name": "biyoloji",  "fullname": "Biyoloji"},
+			{"name": "cografya",  "fullname": "Coğrafya"},
+			{"name": "tarih",  "fullname": "Tarih"},								
+			{"name": "turkdili",  "fullname": "Meslek Dersleri"},
+			{"name": "meslek",  "fullname": "Felsefe Grubu"},
 			{"name": "yabancidil",  "fullname": "Yabancı Dil"}
         ]
 

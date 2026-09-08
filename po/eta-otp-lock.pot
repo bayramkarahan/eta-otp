@@ -97,8 +97,7 @@ msgstr ""
 
 #: src/MainWindow.py:77
 msgid ""
-"Branch Accounts (turkce,matematik,sosyal,fen,bilisim,gorsel,muzik,dikab,"
-"felsefe,turkdili,yabancidil) are being added. Please wait..."
+"Branch Accounts are being added. Please wait..."
 msgstr ""
 
 #: src/MainWindow.py:110

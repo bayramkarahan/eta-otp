@@ -98,10 +98,8 @@ msgstr "Bilgi"
 
 #: src/MainWindow.py:77
 msgid ""
-"Branch Accounts (turkce,matematik,sosyal,fen,bilisim,gorsel,muzik,dikab,"
-"felsefe,turkdili,yabancidil) are being added. Please wait..."
-msgstr "Branş Hesapları (turkce,matematik,sosyal,fen,bilisim,gorsel,muzik,"
-"dikab,felsefe,turkdili,yabancidil)  Eklenecek. Lütfen Bekleyiniz."
+"Branch Accounts are being added. Please wait..."
+msgstr "Branş Hesapları Eklenecek. Lütfen Bekleyiniz."
 
 #: src/MainWindow.py:110
 msgid "Branch Accounts Added..."

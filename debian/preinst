@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "install" ] || [ "$1" = "upgrade" ]; then
+    dpkg-divert \
+        --package eta-otp-lock \
+        --add \
+        --rename \
+        --divert /etc/pam.d/chpasswd.distrib \
+        /etc/pam.d/chpasswd
+fi
+
+exit 0

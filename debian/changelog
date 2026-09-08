@@ -1,8 +1,18 @@
-eta-otp-lock (1.0.7) unstable; urgency=medium
+eta-otp-lock (2026.1.1) unstable; urgency=medium
 
   [ Bayram KARAHAN ]
   * all users logged in
 
+eta-otp-lock (1.0.4) unstable; urgency=medium
+
+  [ Bayram KARAHAN ]
+  * PIN made valid for all users
+  *	PAM behavior changed
+  * Added, branch account add button
+  * Added, branch account password button
+  * Added, branch account delete button
+  * Added, limited account delete button
+  
   [ Ali Riza KESKIN ]
   * fix wrong save button text
 

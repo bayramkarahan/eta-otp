@@ -1,7 +1,7 @@
 Source: eta-otp-lock
 Section: admin
 Priority: optional
-Maintainer: Bayram KARAHAN <bayramk@gmail.com>
+Maintainer: bayram KARAHAN <bayramk@gmail.com>
 Build-Depends: debhelper-compat (= 13), meson
 Standards-Version: 4.6.1
 Homepage: https://github.com/pardus/eta-otp-lock
