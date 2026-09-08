@@ -1,0 +1,3 @@
+# PAM configuration for chpasswd
+
+password    required    pam_unix.so yescrypt

@@ -1,0 +1,12 @@
+Package: eta-otp-lock
+Version: 2026.9.8
+Architecture: all
+Maintainer: bayram KARAHAN <bayramk@gmail.com>
+Installed-Size: 65
+Depends: python3-pyotp, python3-qrcode, libpam-python
+Section: admin
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://github.com/pardus/eta-otp-lock
+Description: Eta otp lock
+ Otp lock for etap
