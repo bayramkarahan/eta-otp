@@ -70,50 +70,109 @@ class MainWindow:
         self.ui_stack_main.set_visible_child_name("settings")
         
     def on_createusers_event(self, widget):
-        GLib.idle_add(
-                self.ui_label_status.set_text,
-                _(f"Creating users. Please wait...")
-            )
-        self.info_dialog(_("Info"), _("Branch Accounts are being added. Please wait..."))
-        users = [
-			{"name": "turkce",  "fullname": "Türkçe"},
-			{"name": "matematik",  "fullname": "Matematik"},
-			{"name": "sosyal",  "fullname": "Sosyal Bil."},
-			{"name": "fen",  "fullname": "Fen Bil."},
-			{"name": "bilisim", "fullname": "Bilişim"},
-			{"name": "gorsel",  "fullname": "Görsel Sanat"},
-			{"name": "muzik",  "fullname": "Müzik"},
-			{"name": "dikab", "fullname": "Din Kültürü"},
-			{"name": "felsefe",  "fullname": "Felsefe Grubu"},
-			{"name": "fizik",  "fullname": "Fizik"},
-			{"name": "kimya",  "fullname": "Kimya"},
-			{"name": "biyoloji",  "fullname": "Biyoloji"},
-			{"name": "cografya",  "fullname": "Coğrafya"},
-			{"name": "tarih",  "fullname": "Tarih"},								
-			{"name": "turkdili",  "fullname": "Meslek Dersleri"},
-			{"name": "meslek",  "fullname": "Felsefe Grubu"},
-			{"name": "yabancidil", "fullname": "Yabancı Dil"}
-        ]
+	    GLib.idle_add(
+	        self.ui_label_status.set_text,
+	        _("Creating users. Please wait...")
+	    )
+	
+	    self.info_dialog(
+	        _("Info"),
+	        _("Branch Accounts are being added. Please wait...")
+	    )
+	
+	    users = [
+	        {"name": "turkce",     "fullname": "Türkçe"},
+	        {"name": "matematik",  "fullname": "Matematik"},
+	        {"name": "sosyal",     "fullname": "Sosyal Bilgiler"},
+	        {"name": "fen",        "fullname": "Fen Bilimleri"},
+	        {"name": "bilisim",    "fullname": "Bilişim"},
+	        {"name": "gorsel",     "fullname": "Görsel Sanat"},
+	        {"name": "muzik",      "fullname": "Müzik"},
+	        {"name": "dikab",      "fullname": "Din Kültürü"},
+	        {"name": "felsefe",    "fullname": "Felsefe Grubu"},
+	        {"name": "fizik",      "fullname": "Fizik"},
+	        {"name": "kimya",      "fullname": "Kimya"},
+	        {"name": "biyoloji",   "fullname": "Biyoloji"},
+	        {"name": "cografya",   "fullname": "Coğrafya"},
+	        {"name": "tarih",      "fullname": "Tarih"},
+	        {"name": "turkdili",   "fullname": "Meslek Dersleri"},
+	        {"name": "meslek",     "fullname": "Felsefe Grubu"},
+	        {"name": "yabancidil", "fullname": "Yabancı Dil"}
+	    ]
+	
+	    # Tüm branş kullanıcılarının dahil olacağı gruplar
+	    groups = [
+	        "cdrom",
+	        "floppy",
+	        "audio",
+	        "dip",
+	        "video",
+	        "plugdev",
+	        "netdev",
+	        "bluetooth",
+	        "lpadmin",
+	        "scanner"
+	    ]
+	
+	    for user in users:
+	        username = user["name"]
+	        fullname = user["fullname"]
+	
+	        # Kullanıcı oluştur
+	        cmd = [
+	            "sudo",
+	            "useradd",
+	            "-m",
+	            username,
+	            "-s", "/bin/bash",
+	            "-U",
+	            "-d", f"/home/{username}",
+	            "-c", fullname
+	        ]
+	
+	        try:
+	            subprocess.run(cmd, check=True)
+	
+	            print(
+	                f"Kullanıcı {username} ({fullname}) oluşturuldu."
+	            )
+	
+	            # Kullanıcıyı tüm gruplara ekle
+	            for group in groups:
+	                try:
+	                    subprocess.run(
+	                        [
+	                            "sudo",
+	                            "usermod",
+	                            "-aG",
+	                            group,
+	                            username
+	                        ],
+	                        check=True
+	                    )
+	
+	                    print(
+	                        f"{username} -> {group} grubuna eklendi."
+	                    )
+	
+	                except subprocess.CalledProcessError as e:
+	                    print(
+	                        f"{username} -> {group} grubuna "
+	                        f"eklenemedi: {e}"
+	                    )
+	
+	        except subprocess.CalledProcessError as e:
+	            print(
+	                f"Kullanıcı {username} oluşturulamadı: {e}"
+	            )
+	
+	    self.info_dialog(
+	        _("Info"),
+	        _("Branch Accounts Added...")
+	    )
 
-        for user in users:
-            username = user["name"]
-            fullname = user["fullname"]
-			# Kullanıcı oluştur
-            cmd = [
-				"sudo", "useradd",
-				"-m", username,
-				"-s", "/bin/bash",
-				"-U",
-				"-d", f"/home/{username}",
-				"-c", fullname
-            ]
 
-            try:
-                subprocess.run(cmd, check=True)
-                print(f"Kullanıcı {username} ({fullname}) oluşturuldu.")
-            except subprocess.CalledProcessError as e:
-                print(f"Kullanıcı {username} oluşturulamadı: {e}")
-        self.info_dialog(_("Info"), _("Branch Accounts Added..."))
+
             
     def on_setpasswdusers_event(self, widget):
         self.info_dialog(_("Info"), _("Branch Accounts passwords will be changed."))
