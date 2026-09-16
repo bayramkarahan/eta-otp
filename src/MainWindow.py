@@ -95,8 +95,8 @@ class MainWindow:
 	        {"name": "biyoloji",   "fullname": "Biyoloji"},
 	        {"name": "cografya",   "fullname": "Coğrafya"},
 	        {"name": "tarih",      "fullname": "Tarih"},
-	        {"name": "turkdili",   "fullname": "Meslek Dersleri"},
-	        {"name": "meslek",     "fullname": "Felsefe Grubu"},
+	        {"name": "turkdili",   "fullname": "Türk Dili Edebiyatı"},
+	        {"name": "meslek",     "fullname": "Meslek Dersleri"},
 	        {"name": "yabancidil", "fullname": "Yabancı Dil"}
 	    ]
 	
@@ -208,8 +208,8 @@ class MainWindow:
         users = [
 			{"name": "turkce",  "fullname": "Türkçe"},
 			{"name": "matematik",  "fullname": "Matematik"},
-			{"name": "sosyal", "fullname": "Sosyal Bil."},
-			{"name": "fen",  "fullname": "Fen Bil."},
+			{"name": "sosyal", "fullname": "Sosyal Bilgiler"},
+			{"name": "fen",  "fullname": "Fen Bilimleri"},
 			{"name": "bilisim", "fullname": "Bilişim"},
 			{"name": "gorsel", "fullname": "Görsel Sanat"},
 			{"name": "muzik",  "fullname": "Müzik"},
@@ -220,8 +220,8 @@ class MainWindow:
 			{"name": "biyoloji",  "fullname": "Biyoloji"},
 			{"name": "cografya",  "fullname": "Coğrafya"},
 			{"name": "tarih",  "fullname": "Tarih"},								
-			{"name": "turkdili",  "fullname": "Meslek Dersleri"},
-			{"name": "meslek",  "fullname": "Felsefe Grubu"},
+			{"name": "turkdili",  "fullname": "Türk Dili Edebiyatı"},
+			{"name": "meslek",  "fullname": "Meslek Dersleri"},
 			{"name": "yabancidil",  "fullname": "Yabancı Dil"}
         ]
 
