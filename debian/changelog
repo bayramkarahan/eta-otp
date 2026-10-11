@@ -1,7 +1,13 @@
+eta-otp-lock (2026.10.11) unstable; urgency=medium
+
+  [ Bayram KARAHAN ]
+  * secretkey update
+  
 eta-otp-lock (2026.9.9) unstable; urgency=medium
 
   [ Bayram KARAHAN ]
   * all users logged in
+
 
 eta-otp-lock (1.0.4) unstable; urgency=medium
 

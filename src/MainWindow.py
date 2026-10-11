@@ -312,7 +312,7 @@ class MainWindow:
 
     def get_qr_code(self, secret):
         totp = pyotp.TOTP(secret)
-        uri = totp.provisioning_uri("GLOBAL@etap", issuer_name="pardus-etap")
+        uri = totp.provisioning_uri("Pin", issuer_name="Tahta")
         qr = qrcode.make(uri+"&algorithm=SHA1&digits=6&period=30", box_size=5)
 
         with BytesIO() as output:
@@ -369,7 +369,7 @@ class MainWindow:
         dialog = Gtk.Dialog(title=_("Enter a Secret"), parent=self.ui_window_main)
         dialog.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL)
         dialog.add_button(Gtk.STOCK_OK, Gtk.ResponseType.OK)
-
+        dialog.set_default_size(300, 120)
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         dialog.get_content_area().add(box)
 
@@ -381,7 +381,7 @@ class MainWindow:
         dialog.show_all()
         user_input = entry.get_text() if dialog.run() == Gtk.ResponseType.OK else None
         dialog.destroy()
-        return user_input
+        return "otp+"+user_input
 
     def input_passwd(self, width=300, is_password=True):
         dialog = Gtk.Dialog(title=_("Enter a Passwd"), parent=self.ui_window_main)
